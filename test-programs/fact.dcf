@@ -1,0 +1,12 @@
+class Program{
+	void main(){
+		int n, i, val;
+		callout("printf","Enter a value\n");
+		n=7;
+		val = 1;
+		for i=2,n{
+			val = val*i;
+		}
+		callout("printf","Factorial of %d is %d\n",n,val);
+	}
+}

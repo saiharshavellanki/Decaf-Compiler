@@ -1,0 +1,8 @@
+class Program{
+	int x,d[100];int a;
+	boolean e[100];
+	int f;
+	void main(int x,int a,boolean b)
+	{
+	}
+}

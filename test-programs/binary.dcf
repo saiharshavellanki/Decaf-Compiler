@@ -1,0 +1,42 @@
+class Program{
+	int a[100];
+	void main()
+	{
+		int n, i, low, high, mid, val, f;
+		f = 0;
+		callout("printf","Enter size of array\n");
+		n=10;
+		callout("printf","Enter sorted array\n");
+		for i=0,n-1{
+			a[i]=i*2;
+		}
+		callout("printf","Enter Value to be searched\n");
+		val = 6;
+		low = 0;
+		high = n-1;
+		for i=0,n-1{
+			if(low>high)
+			{
+				break;
+			}
+			mid = low + (high-low)/2;
+			if(a[mid]==val)
+			{
+				callout("printf","Index of value is %d\n",mid);
+				f = 1;
+			}
+			else
+			{
+				if(a[mid]>val){
+					high = mid-1;
+				}
+				else{
+					low = mid+1;
+				}
+			}
+		}
+		if(f==0){
+			callout("printf","Value not found");
+		}
+	}
+}

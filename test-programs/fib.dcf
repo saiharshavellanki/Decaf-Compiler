@@ -1,0 +1,29 @@
+class Program{
+	void main()
+	{
+		int n, i, a, b, c;
+		callout("printf","Enter number of terms\n");
+		n = 10;
+		a = 0;
+		b = 1;
+		if(n==1){
+			callout("printf","%d",a);
+		}
+		else 
+		{
+			if(n==2){
+				callout("printf","%d %d",a,b);
+			}
+			else{
+				callout("printf","%d %d ",a,b);
+				for i=0,n-3{
+					c = a+b;
+					callout("printf","%d ",c);
+					a = b;
+					b = c;
+				}
+				callout("printf","\n");
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+class Program{
+	void tower(int n,int fromRod,int toRod,int auxRod)
+	{
+		if(n==1){
+			callout("printf","Move 1 disk from %d to %d\n",fromRod,toRod);
+		}
+		tower(n-1,fromRod,auxRod,toRod);
+		callout("printf","Move disk %d from %d to %d\n",n,fromRod,toRod);
+		tower(n-1,auxRod,toRod,fromRod);
+	}
+	void main()
+	{
+		int n;
+		boolean f;
+		callout("printf","Enter number of disks\n");
+		n = 10;
+		f=false;
+		n=f+n;
+		tower(n,0,2,1);
+	}
+}
